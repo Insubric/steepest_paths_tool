@@ -2,14 +2,14 @@
 
 Description
 -----------
-**Steepest paths tool** is an R script that calculates 3D polylines representing the trajectories of propagation of forest fires on mountain slopes in the absence of strong winds solely on the basis of a digital elevation model and a vector map of forested areas.
+**Steepest paths tool** is an R script that calculates three-dimensional polylines representing a first approximation of the trajectories of propagation of forest fires on mountain slopes in the absence of strong winds solely on the basis of a digital elevation model and a vector map of forested areas.
 
-One of the main purposes of this tool is to provide a simplified representation of the possibilities of fire spread on mountain slopes which can be implemented from readily available GIS data (i.e., a DEM and a shapefile representing forest cover).
-In this sense the tool is relatively economical in terms of computing resources and is therefore suitable for application over vast areas. 
+One of the main purposes of this tool is to provide a simplified representation of the possibilities of fire spread on mountain slopes which can be implemented from readily available GIS data (i.e., a DEM and a shapefile representing forest cover) without considering more complex data such as the influence of particular weather conditions or the different types of fuel present in the territory.
+In this sense the tool is relatively economical in terms of imput data and computing resources and is therefore suitable for application over vast areas. 
 
 Tool outputs can be used for instance to assess the potential of fire propagation across landscapes or to estimate the risk of large fires at regional level by taking into account at the same time the spatial distribution of forest cover and the shape of the terrain surface.
 
-The tool is based on the assumption that in mountainous environment, the spread of fire is mainly determined by the combined effect of topography and fuel connectivity, that is, by the spatial arrangement of the forests and open areas on the slope in relation to the orientation of the lines of maximum gradient.
+The tool is based on the assumption that in mountainous environment, the spread of fire is mainly determined by the combined influence of topography and fuel connectivity, that is, by the spatial arrangement of the forests and open areas on the slope in relation to the orientation of the lines of maximum gradient.
 
 Definitions
 ----------------------
@@ -30,3 +30,9 @@ Common attributes:
 * **intersects_forest**: If the line intersects the forest, this value is 1, else 0.
 * **length**: The 2 dimensional length of the line (in meters).
 * **length3d**: The three-dimensional length of the line (in meters).
+
+Citation
+----------------------
+If you use the **Steepest paths tool** and publish some result based on this R script, please cite this software as follows:
+
+Swiss Federal Institute for Forest Snow and Landscape Research WSL, 2023, Steepest paths tool (vers. 1.0), https://github.com/Insubric/steepest_paths_tool.
