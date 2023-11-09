@@ -8,20 +8,20 @@ This document presents an overview of the technical challenges of the steepest p
 
 Trajectory computation
 ----------------------
-Denote the position of the fire at time t by x(t). The procedure outlined in the submitted paper (Conedera et al. 2023) makes use of the fact that the path which follows the gradient of the slope is exactly the path for which
+Denote the position of the fire at time **t** by **x(t)**. The procedure outlined in the submitted paper (Conedera et al. 2023) makes use of the fact that the path which follows the gradient of the slope is exactly the path for which
 
-ẋ(t)=∇h
+**ẋ(t)=∇h**
 
-where h is the altitude. In other words, the velocity of x is collinear with the gradient at the current location. Starting from the user-defined point of ignition, we thus may formulate the problem of determining x as an initial value problem (IVP).
+where **h** is the altitude. In other words, the velocity of **x** is collinear with the gradient at the current location. Starting from the user-defined point of ignition, we thus may formulate the problem of determining **x** as an initial value problem (**IVP**).
 We numerically resolve this equation by means of an explicit Euler method:
 
-x(t+Δt)≈x(t)+Δt·∇h
+**x(t+Δt)≈x(t)+Δt·∇h**
 
 Note that this is a first order method and as such, a low degree of accuracy of the obtained results is to be expected. However, in practice this proved to be sufficient and was thus preferred over more complex methods due to its low computational complexity.
 
 Vectorization
 ----------------------
-Much of the code design was governed by the constraints stemming from the fact that on the one hand the IVP needed to be solved for a large number of initial values (several millions) while at the same time, the entire codebase was required to be written in R, in order to ensure a high degree of maintainability and customizability for a wide range of possible end-users.
+Much of the code design was governed by the constraints stemming from the fact that on the one hand the **IVP** needed to be solved for a large number of initial values (several millions) while at the same time, the entire codebase was required to be written in R, in order to ensure a high degree of maintainability and customizability for a wide range of possible end-users.
 This meant that much of the code was necessarily written in a vectorized form. In particular, instead of computing the trajectories separately for each point of ignition, we simultaneously update the positions for all simulated fire trajectories, leveraging the extract function from the terra package, which supports simultaneously extracting the values of a raster at multiple points.
 
 Memory usage
@@ -64,4 +64,4 @@ In this manner, at each step the computation becomes more expensive as the squar
 
 Reference
 ----------------------
-Conedera, Marco; Feusi, Jeremy; Pezzatti, Gianni Boris; Krebs, Patrik; 2023. Will future risk of large fires in mountain areas depend on bottom-up fire drivers? Paper submitted to * *Natural Hazards* * (Springer) in November 2023.
+Conedera, Marco; Feusi, Jeremy; Pezzatti, Gianni Boris; Krebs, Patrik; 2023. Will future risk of large fires in mountain areas depend on bottom-up fire drivers? Paper submitted to _Natural Hazards_ (Springer) in November 2023.
