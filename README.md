@@ -20,12 +20,12 @@ Outputs
 The output of the steepest paths tool is a SpatiaLite database which can be accessed using either the open source geographic information system QGIS or the R statistical software (with “rgdal” or “sf” packages).
 This database contains 3 vector layers of three-dimensional polylines, which can be described as follow:
 * **lines**: The entire computed line from the point of ignition until a main mountain summit is reached, calculated solely on the basis of the morphology of the terrain and without considering the intersections with the forest cover.
-* **blocked_lines**: The computed line up until the point at which for the first time the trajectory leaves the forest for a horizontal distance greater than a threshold value (see the * *maxnoforest* * variable which is set by default to 40 meters in the R script).
+* **blocked_lines**: The computed line up until the point at which for the first time the trajectory leaves the forest for a horizontal distance greater than a threshold value (see the _maxnoforest_ variable which is set by default to 40 meters in the R script).
 * **last_forest_lines**: The computed line up until the point at which the trajectory leaves the forested area for the last time.
 
 Common attributes assigned to each resulting vector feature:
-* **id**: A unique number identifying the line. This number is determined by the starting point of the line which in our case is intended to represent a possible ignition point of a forest fire. These starting points are located on a regular grid by subsampling the centroids of the pixels of the digital elevation model (see the calc_nth variable which is set by default to 10 in the R script). For each ignition point the steepest paths algorithm produce three types of polylines (lines, blocked_lines, last_forest_lines) which share the same origin and have therefore the same identification number.
-* **valid**: Can the steepest path obtained be considered valid or not? If the line reached the edge of the DEM at some point during its evolution, this value is 0, else 1.
+* **id**: A unique number identifying the line. This number is determined by the starting point of the line which in our case is intended to represent a possible ignition point of a forest fire. These starting points are located on a regular grid by subsampling the centroids of the pixels of the digital elevation model (see the _calc_nth_ variable which is set by default to 10 in the R script). For each ignition point the steepest paths algorithm produce three types of polylines (lines, blocked_lines, last_forest_lines) which share the same origin and have therefore the same identification number.
+* **valid**: Can the steepest path obtained be considered valid or not? If the line reached the edge of the DEM raster at some point during its evolution, this value is 0, else 1.
 * **end_contained_in_forest**: If the endpoint of the line is contained within the forest, this value is 1, else 0.
 * **intersects_forest**: If the line intersects the forest, this value is 1, else 0.
 * **length**: The 2 dimensional length of the line (in meters).
