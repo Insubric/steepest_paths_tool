@@ -13,7 +13,7 @@ The tool is based on the assumption that in mountainous environment, the spread 
 
 Definitions
 ----------------------
-With reference to the spread of forest fires on mountain slopes, we define the steepest path as the 3D polyline or linestring that starts from the point of ignition, runs up the slope following the direction of the maximum gradient of the terrain surface (i.e. gaining the most elevation with the shortest possible path), always moves on land covered by woody vegetation (trees or shrubs), and stops where the path reaches a main summit (e.g., a mountain top) or encounters large open areas that can arrest the spread of fire (e.g., grassland, farmland, rock faces).
+With reference to the spread of forest fires on mountain slopes, we define the _steepest path_ as the 3D polyline or linestring that starts from the point of ignition, runs up the slope following the direction of the maximum gradient of the terrain surface (i.e. gaining the most elevation with the shortest possible path), always moves on land covered by woody vegetation (trees or shrubs), and stops where the path reaches a main summit (e.g., a mountain top) or encounters large open areas that can arrest the spread of fire (e.g., grassland, farmland, rock faces).
 
 Outputs
 ----------------------
@@ -44,6 +44,7 @@ However, the **Steepest paths tool** has some features that may be advantageous 
 1) Is written in R and can therefore be more easily customised to particular needs.
 2) It offers an integrated module for not interrupting the upward progression on the terrain surface of the resulting three-dimensional polylines when they reach a local maximum of little importance in the digital elevation model.
 3) It calculated a whole series of attributes and descriptors for each resulting vector feature.
+4) It provides the possibility of analysing the intersections of the steepest paths with the forest areas.
 
 Contact
 ----------------------
