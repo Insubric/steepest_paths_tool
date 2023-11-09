@@ -35,6 +35,16 @@ Challenges
 ----------------------
 For an overview of the main challenges that were faced in the attempt to optimise the steepest path algorithm, read the [document](https://github.com/Insubric/steepest_paths_tool/blob/master/Challenges.md) dedicated to this topic.
 
+Comparison with other tools
+----------------------
+The _r3.flow_ function of [GRASS GIS](https://grass.osgeo.org/) software uses a digital elevation model as imput data to compute 3D flow lines both downstream (with parameter _direction_ set to "down") and upstream (with parameter _direction_ set to "up").
+Upstream 3D flow lines resulting from this GRASS GIS function are quite similar to the steepest paths.
+
+However, the **Steepest paths tool** has some features that may be advantageous for some users:
+1) Is written in R and can therefore be more easily customised to particular needs.
+2) It offers an integrated module for not interrupting the upward progression on the terrain surface of the resulting three-dimensional polylines when they reach a local maximum of little importance in the digital elevation model.
+3) It calculated a whole series of attributes and descriptors for each resulting vector feature.
+
 Contact
 ----------------------
 Jeremy Feusi (e-mail: jeremy.feusi@wsl.ch or jeremy@feusi.co)
