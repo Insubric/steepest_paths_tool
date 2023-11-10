@@ -19,7 +19,7 @@ Outputs
 ----------------------
 The output of the steepest paths tool is a SpatiaLite database which can be accessed using either the open source geographic information system QGIS or the R statistical software (with “rgdal” or “sf” packages).
 This database contains 3 vector layers of three-dimensional polylines, which can be described as follow:
-* **lines**: The entire computed line from the point of ignition until a main mountain summit is reached, calculated solely on the basis of the morphology of the terrain and without considering the intersections with the forest cover.
+* **lines**: The entire computed line from the starting point (representing a possible ignition point of a forest fire) until a main mountain summit is reached, calculated solely on the basis of the morphology of the terrain and without considering the intersections with the forest cover.
 * **blocked_lines**: The computed line up until the point at which for the first time the trajectory leaves the forest for a horizontal distance greater than a threshold value (see the _maxnoforest_ variable which is set by default to 40 meters in the R script).
 * **last_forest_lines**: The computed line up until the point at which the trajectory leaves the forested area for the last time.
 
@@ -43,7 +43,7 @@ Upstream 3D flow lines resulting from this GRASS GIS function are quite similar 
 However, the **Steepest paths tool** has some features that may be advantageous for some users:
 1) Is written in R and can therefore be more easily customised to particular needs.
 2) It offers an integrated module for not interrupting the upward progression on the terrain surface of the resulting three-dimensional polylines when they reach a local maximum of little importance in the digital elevation model (see [here](https://github.com/Insubric/steepest_paths_tool/blob/master/Challenges.md) the paragraph devoted to the "jumps").
-3) It calculated a whole series of attributes and descriptors for each resulting vector feature.
+3) It calculates some useful attributes for each resulting vector feature.
 4) It provides the possibility of analysing the intersections of the steepest paths with the forest areas.
 
 Contact
