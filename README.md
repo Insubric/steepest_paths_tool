@@ -40,8 +40,9 @@ Comparison with other tools
 The _r3.flow_ function of [GRASS GIS](https://grass.osgeo.org/) software uses a digital elevation model as imput data to compute 3D flow lines both downstream (with parameter _direction_ set to "down") and upstream (with parameter _direction_ set to "up").
 Upstream 3D flow lines resulting from this GRASS GIS function are quite similar to the steepest paths.
 
+Compared to such a well-known and very reliable GRASS GIS function, our little project is in many ways still unfinished and with much room for improvement.
 However, the **Steepest paths tool** has some features that may be advantageous for some users:
-1) Is written in R and can therefore be more easily customised to particular needs.
+1) It is written in R and can therefore be more easily customised to particular needs.
 2) It offers an integrated module for not interrupting the upward progression on the terrain surface of the resulting three-dimensional polylines when they reach a local maximum of little importance in the digital elevation model (see [here](https://github.com/Insubric/steepest_paths_tool/blob/master/Challenges.md) the paragraph devoted to the "jumps").
 3) It calculates some useful attributes for each resulting vector feature.
 4) It provides the possibility of analysing the intersections of the steepest paths with the forest areas.
