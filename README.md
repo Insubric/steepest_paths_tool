@@ -47,6 +47,15 @@ However, the **Steepest paths tool** has some features that may be advantageous 
 3) It calculates some useful attributes for each resulting vector feature.
 4) It provides the possibility of analysing the intersections of the steepest paths with the forest areas.
 
+Requirements
+----------------------
+The SQLite and SpatiaLite system libraries must be installed on the computer.
+
+In particular all the dynamic link libraries (.dll) consituting the SpatiaLite extension module (e.g., "mod_spatialite.dll", "libcrypto-3-x64.dll", "libsqlite3-0.dll", "libgeos.dll", "libproj_9_2.dll") must be available in a folder which then will be included among the environment variables of the R session.
+
+All these .dll files can be downloaded as MS Windows binaries from the [Gaia-SINS](https://www.gaia-gis.it/gaia-sins) federated projects home-page.
+See the content of the "mod_spatialite-5.1.0-win-amd64.7z" compressed archive file (vers. 2023-08-05).
+
 Contact
 ----------------------
 Jeremy Feusi (e-mail: jeremy.feusi@wsl.ch or jeremy@feusi.co)
