@@ -60,7 +60,7 @@ See for instance the content of the "mod_spatialite-5.1.0-win-amd64.7z" compress
 
 Installation instructions
 ----------------------
-Download and copy/paste to a desired folder location on your computer the two R scripts which constitute the Steepest paths tool:
+Download from the "Releases" section and copy/paste to a desired folder location on your computer the two R scripts which constitute the current version (v0.10) of the Steepest paths tool:
 * The main script "**main.R**" which performs all preparatory operations prior to calculations (i.e., the setting of all parameters that control the calculations and loading of input data).
 * The joined core script "**calc_lines.R**" which calculates the steepest path lines and the intersection with forest polygons.
 
@@ -91,4 +91,4 @@ Citation
 ----------------------
 If you use the **Steepest paths tool** and publish some result based on this R script, please cite this software as follows:
 
-Swiss Federal Institute for Forest Snow and Landscape Research WSL, 2023, Steepest paths tool (vers. 1.0), https://github.com/Insubric/steepest_paths_tool.
+Swiss Federal Institute for Forest Snow and Landscape Research WSL, 2023, Steepest paths tool (v0.10), https://github.com/Insubric/steepest_paths_tool.
