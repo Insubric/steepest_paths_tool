@@ -76,10 +76,10 @@ Add the main and core scripts ("main.R", "calc_lines.R") to this newly created R
 
 Run the main R script. Attention: at least the first time, it is best to proceed one step at a time so that you understand the organization of the code and read the included comments and instructions.
 
-In the sections "Special requirements" and "Input/output files" the user has to enter and define some file and path names as well as the coordinate system.
-In the following section entitled "Parameters" the user can set and modify some important variables that control the computation of the steepest paths.
+In the sections "**Special requirements**" and "**Input/output files**" the user has to enter and define some file and path names as well as the coordinate system.
+In the following section entitled "**Parameters**" the user can set and modify some important variables that control the computation of the steepest paths.
 
-When executing the last line of code of the main R script, the function _source_ trigger the run of the joined core R script which calculates the steepest path lines. Alternatively the user can skip this last line and execute the core script manually one step at a time in order to have more control over the different calculation processes.
+When executing the last line of the main R script, the function _source_ trigger the run of the joined core R script which calculates the steepest path lines. Alternatively the user can skip this last line and execute the core script manually one step at a time in order to have more control over the different calculation processes.
 
 Beware that the calculation can take a long time (many hours or even days) depending on the size of the DEM and the number of starting points generated. We therefore recommend starting with a relatively small DEM so as to essay the calculation time. For example, using a DEM with an extent of 20 km x 20 km and a pixel size of 10 m and creating a starting point every 10 pixels (i.e., with _calc_nth_ set to 10 in the main R script) you already get as a result 40,000 output polyline features.
 
