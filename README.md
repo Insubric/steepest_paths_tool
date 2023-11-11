@@ -72,7 +72,8 @@ Launch RStudio, create a new empty project (File -> New Project) and save it in 
 
 Add the main and core scripts ("main.R", "calc_lines.R") to this newly created RStudio project (File -> Open File).
 
-Run the main R script the first time by proceeding one step at a time and carefully reading the many comments and instructions therein.
+Run the main R script. Attention: at least the first time, it is best to proceed one step at a time so that you understand the organization of the code and carefully read the many included comments and instructions.
+
 In the sections "Special requirements" and "Input/output files" the user has to enter and define some file and path names as well as the coordinate system.
 In the following section entitled "Parameters" the user can set and modify some important variables that control the computation of the steepest paths.
 
