@@ -58,6 +58,15 @@ In particular all the dynamic link libraries (.dll) consituting the SpatiaLite e
 All these .dll files can be downloaded as MS Windows binaries from the [Gaia-SINS](https://www.gaia-gis.it/gaia-sins) federated projects home-page.
 See for instance the content of the "mod_spatialite-5.1.0-win-amd64.7z" compressed archive file (vers. 2023-08-05). This SpatiaLite extension module is a pure loadable module lacking any explicit SQLite3 dependency (see the specific [web page](https://www.gaia-gis.it/fossil/libspatialite/wiki?name=mod_spatialite) in Gaia-SINS for further explanations). 
 
+Installation instructions
+----------------------
+Download and copy/paste to a desired folder location the two R scripts which constitute the Steepest paths tool:
+1) The main R script ("main.R") which performs all preparatory operations prior to calculations (i.e., the setting of all parameters that control the calculations and loading of input data)
+2) The related R script ("calc_lines.R") which calculates the steepest path lines and the intersection with forest polygons
+
+Installation instructions, getting started tips
+
+
 Contact
 ----------------------
 Jeremy Feusi (e-mail: jeremy.feusi@wsl.ch or jeremy@feusi.co)
