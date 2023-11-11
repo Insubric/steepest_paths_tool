@@ -72,7 +72,7 @@ Getting started tips
 ----------------------
 Launch RStudio, create a new empty project (File -> New Project) and save it in the same folder where the above-mentioned 4 items are already found.
 
-Add the main and core scripts ("main.R", "calc_lines.R") to this newly created RStudio project (File -> Open File). If you don't want to use RStudio or even create a new project remember to set the working directory properly.
+Add the main and core scripts ("main.R", "calc_lines.R") to this newly created RStudio project (File -> Open File). If you don't want to use RStudio or even create a new project remember to set the working directory properly (function _setwd_).
 
 Run the main R script. Attention: at least the first time, it is best to proceed one step at a time so that you understand the organization of the code and carefully read the included comments and instructions.
 
