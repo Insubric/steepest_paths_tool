@@ -58,7 +58,7 @@ In particular all the dynamic link libraries (.dll) consituting the SpatiaLite e
 All these .dll files can be downloaded as MS Windows binaries from the [Gaia-SINS](https://www.gaia-gis.it/gaia-sins) federated projects home-page.
 See for instance the content of the "mod_spatialite-5.1.0-win-amd64.7z" compressed archive file (vers. 2023-08-05). This SpatiaLite extension module is a pure loadable module lacking any explicit SQLite3 dependency (see the specific [web page](https://www.gaia-gis.it/fossil/libspatialite/wiki?name=mod_spatialite) in Gaia-SINS for further explanations). 
 
-Installation instructions and getting started tips
+Installation instructions
 ----------------------
 Download and copy/paste to a desired folder location on your computer the two R scripts which constitute the Steepest paths tool:
 1) The main script "**main.R**" which performs all preparatory operations prior to calculations (i.e., the setting of all parameters that control the calculations and loading of input data).
@@ -68,6 +68,8 @@ Add in the same folder a digital elevation model (DEM) in .tif format which repr
 
 Add in the same folder a shapefile of polygons which represent the forest areas in your region of interest. This shapefile and the DEM must have the same and well-defined coordinate system (CRS). The tool is set up to work with coordinate systems that use the meter as reference unit of measure.
 
+Getting started tips
+----------------------
 Launch RStudio, create a new empty project (File -> New Project) and save it in the same folder where the above-mentioned 4 items are already found.
 
 Add the main and core scripts ("main.R", "calc_lines.R") to this newly created RStudio project (File -> Open File).
@@ -77,7 +79,9 @@ Run the main R script. Attention: at least the first time, it is best to proceed
 In the sections "Special requirements" and "Input/output files" the user has to enter and define some file and path names as well as the coordinate system.
 In the following section entitled "Parameters" the user can set and modify some important variables that control the computation of the steepest paths.
 
+When executing the last line of code of the main R script, the function source() trigger the run of the joined core R script which calculates the steepest path lines. Alternatively the user can skip this last line and execute the core script manually one step at a time in order to have more control over the different calculation processes.
 
+Beware that the calculation can take a long time (even many hours) depending on the size of the DEM and the number of starting points generated. We therefore recommend starting with a relatively small DEM so as to essay the calculation time. For example, using a DEM with an extent of 20 km x 20 km and a pixel size of 10 m and creating a starting point every 10 pixels (i.e., with _calc_nth_ set to 10 in the main R script) you already get as a result 40,000 output polyline features.
 
 
 
