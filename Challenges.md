@@ -35,7 +35,7 @@ Computation of the jumps
 ----------------------
 Usually, digital elevation models contain lots of local elevation maxima that could trap the steepest paths preventing them from developing further up the slope.
 
-Considering that forest fires usually only stop when they reach a summit that is truly prominent in relation to the surrounding relief, we have implemented a procedure to allow the path to jump from a local maximum to the nearest point located at a higher elevation on the slope within a certain distance (see the _rmax_ variable which is set by default to 100 meters in the R script).
+Considering that forest fires usually only stop when they reach a summit that is truly prominent in relation to the surrounding relief, we have implemented a procedure to allow the path to jump from a local maximum to the nearest point located at a higher elevation on the slope within a certain distance (see the _rmax_ variable which is set by default to 100 meters in the main R script).
 
 Regarding these “jumps” (see Fig. 2 and related description in the submitted paper), observe that many ignition points may converge towards a common local maximum (e.g., the summit of a small hill).
 Hence separately computing the point to which each fire jumps will inevitably lead to duplicate computations.
@@ -50,7 +50,7 @@ The structure of the algorithm can hence be summarized as follows:
 1. Compute the gradient from the DEM.
 2. Compute the “jump points” as described in the previous paragraph.
 3. Compute the steepest paths following the procedure described in the submitted paper.
-4. Truncate the steepest paths at the location at which for the first time they leave the forest for a horizontal distance greater than a threshold value (see the _maxnoforest_ variable which is set by default to 40 meters in the R script).
+4. Truncate the steepest paths at the location at which for the first time they leave the forest for a horizontal distance greater than a threshold value (see the _maxnoforest_ variable which is set by default to 40 meters in the main R script).
 
 Computation of the truncation of the trajectories
 ----------------------
