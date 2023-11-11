@@ -49,7 +49,9 @@ However, the **Steepest paths tool** has some features that may be advantageous 
 
 Requirements
 ----------------------
-The SQLite and SpatiaLite system libraries must be installed on the computer.
+R, RTools and eventually also RStudio Desktop, as well as a selection of R packages (see "Required packages" section in the main R script) must be installed and updated on the computer.
+
+The SQLite and SpatiaLite system libraries must also be installed on your system.
 
 In particular all the dynamic link libraries (.dll) consituting the SpatiaLite extension module (e.g., "mod_spatialite.dll", "libcrypto-3-x64.dll", "libsqlite3-0.dll", "libgeos.dll", "libproj_9_2.dll") must be available in a folder which then will be included among the environment variables of the R session (see "Special requirements" section in the main R script).
 
