@@ -65,7 +65,7 @@ Download and copy/paste to a desired folder location on your computer the two R 
 * The joined core script "**calc_lines.R**" which calculates the steepest path lines and the intersection with forest polygons.
 
 Add in the same folder the following two input data:
-* A **digital elevation model** (DEM) in .tif format which represents the elevation of the terrain surface of your region of interest. Obviously, there must be some fairly pronounced relief (hills or mountains) since on a flat surface such as a wide plain steepest paths fail to develop. The DEM should be a plane grid with square pixels and use a projected coordinate system which form a Cartesian reference system. 
+* The **digital elevation model** (DEM) in .tif format which represents the elevation of the terrain surface of your region of interest. Obviously, there must be some fairly pronounced relief (hills or mountains) since on a flat surface such as a wide plain steepest paths fail to develop. The DEM should be a plane grid with square pixels and use a projected coordinate system which form a Cartesian reference system. 
 * The **shapefile of polygons** which represent the forest areas in your region of interest. This shapefile and the DEM must have the same and well-defined coordinate system (CRS). The tool is set up to work with coordinate systems that use the meter as reference unit of measure.
 
 Getting started tips
