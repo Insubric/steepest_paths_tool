@@ -62,7 +62,7 @@ Installation instructions
 ----------------------
 Download from the "Releases" section and copy/paste to a desired folder location on your computer the two R scripts which constitute the current version (v0.10) of the Steepest paths tool:
 * The main script "**main.R**" which performs all preparatory operations prior to calculations (i.e., the setting of all parameters that control the calculations and loading of input data).
-* The joined core script "**calc_lines.R**" which calculates the steepest path lines and the intersection with forest polygons.
+* The core script "**calc_lines.R**" which calculates the steepest path lines and the intersection with forest polygons.
 
 Add in the same folder the following two input data:
 * The **digital elevation model** (DEM) in .tif format which represents the elevation of the terrain surface of your region of interest. Obviously, there must be some fairly pronounced relief (hills or mountains) since on a flat surface such as a wide plain steepest paths fail to develop. The DEM should be a plane grid with square pixels and use a projected coordinate system which form a Cartesian reference system. 
