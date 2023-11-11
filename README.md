@@ -58,17 +58,27 @@ In particular all the dynamic link libraries (.dll) consituting the SpatiaLite e
 All these .dll files can be downloaded as MS Windows binaries from the [Gaia-SINS](https://www.gaia-gis.it/gaia-sins) federated projects home-page.
 See for instance the content of the "mod_spatialite-5.1.0-win-amd64.7z" compressed archive file (vers. 2023-08-05). This SpatiaLite extension module is a pure loadable module lacking any explicit SQLite3 dependency (see the specific [web page](https://www.gaia-gis.it/fossil/libspatialite/wiki?name=mod_spatialite) in Gaia-SINS for further explanations). 
 
-Installation instructions
+Installation instructions and getting started tips
 ----------------------
-Download and copy/paste to a desired folder location the two R scripts which constitute the Steepest paths tool:
-1) The main R script ("main.R") which performs all preparatory operations prior to calculations (i.e., the setting of all parameters that control the calculations and loading of input data).
-2) The related R script ("calc_lines.R") which calculates the steepest path lines and the intersection with forest polygons.
+Download and copy/paste to a desired folder location on your computer the two R scripts which constitute the Steepest paths tool:
+1) The main script "**main.R**" which performs all preparatory operations prior to calculations (i.e., the setting of all parameters that control the calculations and loading of input data).
+2) The joined core script "**calc_lines.R**" which calculates the steepest path lines and the intersection with forest polygons.
 
 Add in the same folder a digital elevation model (DEM) in .tif format which represents the elevation of the terrain surface of your region of interest. Obviously, there must be some fairly pronounced relief (hills or mountains) since on a flat surface such as a wide plain steepest paths fail to develop. The DEM should be a plane grid with square pixels and use a projected coordinate system which form a Cartesian reference system. 
 
 Add in the same folder a shapefile of polygons which represent the forest areas in your region of interest. This shapefile and the DEM must have the same and well-defined coordinate system (CRS). The tool is set up to work with coordinate systems that use the meter as reference unit of measure.
 
-Installation instructions, getting started tips
+Launch RStudio, create a new empty project (File -> New Project) and save it in the same folder where the above-mentioned 4 items are already found.
+
+Add the main and core scripts ("main.R", "calc_lines.R") to this newly created RStudio project (File -> Open File).
+
+Run the main R script the first time by proceeding one step at a time and carefully reading the many comments and instructions therein.
+In the sections "Special requirements" and "Input and output files" the user has to enter and define some file and path names.
+In the following section entitled "Parameters" the user can set and modify some important variables that control the calculation of the steepest paths.
+
+
+
+
 
 
 Contact
