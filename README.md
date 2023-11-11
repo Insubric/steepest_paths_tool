@@ -61,8 +61,12 @@ See for instance the content of the "mod_spatialite-5.1.0-win-amd64.7z" compress
 Installation instructions
 ----------------------
 Download and copy/paste to a desired folder location the two R scripts which constitute the Steepest paths tool:
-1) The main R script ("main.R") which performs all preparatory operations prior to calculations (i.e., the setting of all parameters that control the calculations and loading of input data)
-2) The related R script ("calc_lines.R") which calculates the steepest path lines and the intersection with forest polygons
+1) The main R script ("main.R") which performs all preparatory operations prior to calculations (i.e., the setting of all parameters that control the calculations and loading of input data).
+2) The related R script ("calc_lines.R") which calculates the steepest path lines and the intersection with forest polygons.
+
+Add in the same folder a digital elevation model (DEM) in .tif format which represents the elevation of the terrain surface of your region of interest. Obviously, there must be some fairly pronounced relief (hills or mountains) since on a flat surface such as a wide plain steepest paths fail to develop. The DEM must be a plane square grid with square pixels and use a projected coordinate system which form a Cartesian reference system. 
+
+Add in the same folder a shapefile of polygons which represent the forest areas in your region of interest. This shapefile and the DEM must have the same and well-defined coordinate system (CRS). The tool is set up to work with coordinate systems that use the meter as the unit of measure.
 
 Installation instructions, getting started tips
 
