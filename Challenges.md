@@ -22,7 +22,7 @@ Note that this is a first order method and as such, a low degree of accuracy of 
 Vectorization
 ----------------------
 Much of the code design was governed by the constraints stemming from the fact that on the one hand the **IVP** needed to be solved for a large number of initial values (several millions) while at the same time, the entire codebase was required to be written in R, in order to ensure a high degree of maintainability and customizability for a wide range of possible end-users.
-This meant that much of the code was necessarily written in a vectorized form. In particular, instead of computing the trajectories separately for each point of ignition, we simultaneously update the positions for all simulated fire trajectories, leveraging the extract function from the terra package, which supports simultaneously extracting the values of a raster at multiple points.
+This meant that much of the code was necessarily written in a vectorized form. In particular, instead of computing the trajectories separately for each point of ignition, we simultaneously update the positions for all simulated fire trajectories, leveraging the _extract_ function from the _terra_ package, which supports simultaneously extracting the values of a raster at multiple points.
 
 Memory usage
 ----------------------
