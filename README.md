@@ -81,7 +81,7 @@ In the following section entitled "Parameters" the user can set and modify some 
 
 When executing the last line of code of the main R script, the function _source_ trigger the run of the joined core R script which calculates the steepest path lines. Alternatively the user can skip this last line and execute the core script manually one step at a time in order to have more control over the different calculation processes.
 
-Beware that the calculation can take a long time (even many hours or even days) depending on the size of the DEM and the number of starting points generated. We therefore recommend starting with a relatively small DEM so as to essay the calculation time. For example, using a DEM with an extent of 20 km x 20 km and a pixel size of 10 m and creating a starting point every 10 pixels (i.e., with _calc_nth_ set to 10 in the main R script) you already get as a result 40,000 output polyline features.
+Beware that the calculation can take a long time (many hours or even days) depending on the size of the DEM and the number of starting points generated. We therefore recommend starting with a relatively small DEM so as to essay the calculation time. For example, using a DEM with an extent of 20 km x 20 km and a pixel size of 10 m and creating a starting point every 10 pixels (i.e., with _calc_nth_ set to 10 in the main R script) you already get as a result 40,000 output polyline features.
 
 Contact
 ----------------------
