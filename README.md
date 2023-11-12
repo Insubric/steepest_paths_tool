@@ -85,7 +85,7 @@ Be aware that the calculation can take a long time (many hours or even days) dep
 
 Contact
 ----------------------
-Jeremy Feusi (e-mail: jeremy.feusi@wsl.ch or jeremy@feusi.co)
+Jeremy Feusi (e-mail: jeremy.feusi@wsl.ch)
 
 Citation
 ----------------------
