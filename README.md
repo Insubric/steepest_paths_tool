@@ -2,10 +2,10 @@
 
 Description
 -----------
-**Steepest paths tool** is an R script that calculates three-dimensional polyline vectors representing a first approximation of the trajectories of propagation of forest fires on mountain slopes in the absence of strong winds solely on the basis of a digital elevation model and a vector map of forested areas.
+The **Steepest paths tool** is an R script which computes three-dimensional polyline vectors representing a first approximation of the trajectories of propagation of forest fires along mountain slopes in the absence of strong winds, operating solely on the basis of a digital elevation model and a vector map of the forested areas.
 
-One of the main purposes of this tool is to provide a simplified representation of the possibilities of fire spread on mountain slopes which can be implemented from readily available GIS data (i.e., a DEM and a shapefile representing forest cover) without considering more complex data such as the influence of particular weather circumstances or the presence of different fuel types and conditions in the territory.
-In this sense the tool is relatively economical in terms of imput data and computing resources and is therefore suitable for application over vast areas. 
+One of the main purposes of this tool is to provide a simplified representation of the potential forest fire spread on mountain slopes, which can be implemented from readily available GIS data (i.e., a DEM and a shapefile representing forest cover) without taking into consideration more complex data such as the influence of particular weather conditions or the presence of different fuel types in the territory.
+In this sense the tool is rather economical in terms of input data and computational resources and may therefore be applied even over large areas. 
 
 Tool outputs can be used for instance to assess the potential of fire propagation across landscapes or to estimate the risk of large fires at regional level by taking into account at the same time the spatial distribution of forest cover and the shape of the terrain surface.
 
