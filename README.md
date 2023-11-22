@@ -7,9 +7,9 @@ The **Steepest paths tool** is an R script which computes three-dimensional poly
 One of the main purposes of this tool is to provide a simplified representation of the potential forest fire spread on mountain slopes, which can be implemented from readily available GIS data (i.e., a DEM and a shapefile representing forest cover) without taking into consideration more complex data such as the influence of particular weather conditions or the presence of different fuel types in the territory.
 In this sense the tool is rather economical in terms of input data and computational resources and may therefore be applied even over large areas. 
 
-Tool outputs can be used for instance to assess the potential of fire propagation across landscapes or to estimate the risk of large fires at regional level by taking into account at the same time the spatial distribution of forest cover and the shape of the terrain surface.
+The outputs of the tool may for instance be used to assess the potential fire propagation across a landscape or to estimate the risk for large fires to occur on a regional level, by at the same time taking into account the spatial distribution of the forest cover and the shape of the terrain surface.
 
-The tool is based on the assumption that in mountainous environment, the spread of fire is mainly determined by the combined influence of topography and fuel connectivity, that is, by the spatial arrangement of the forests and open areas on the slope in relation to the orientation of the lines of maximum gradient.
+The implementation is based on the assumption that in mountainous environments the spread of a fire is mainly determined by the combined influence of topography and fuel connectivity, that is, by the spatial interplay between the forest and the slope. In other words, we consider the spatial arrangement of the forests and open areas on the slope in relation to the orientation of the lines of maximum gradient as a key factor for the assessment of the potential of spreading of forest fires along mountain slopes.
 
 Definitions
 ----------------------
