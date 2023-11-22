@@ -43,7 +43,7 @@ Upstream 3D flow lines resulting from this GRASS GIS function are quite similar 
 Compared to an established and highly reliable tool such as this GRASS GIS function, our ad hoc project is in many ways still unfinished and there is certainly much room for improvement.
 However, the **Steepest paths tool** has some features that may be advantageous for some users:
 1) It is written in R and can therefore be more easily customised to particular needs.
-2) It offers an integrated module for the continuation of the upward progression on the terrain surface when a local maximum of little importance is reached (see the paragraph devoted to "jumps" in [this document](https://github.com/Insubric/steepest_paths_tool/blob/master/Challenges.md)).
+2) It offers an integrated module for the continuation of the upward progression on the terrain surface when a local maximum of little importance is reached (see the paragraph devoted to the computation of the "jumps" in [this document](https://github.com/Insubric/steepest_paths_tool/blob/master/Challenges.md)).
 3) It computes some useful attributes for each resulting vector feature.
 4) It provides the possibility to analyze the intersection of the steepest paths with the forested areas.
 
@@ -60,28 +60,28 @@ See for instance the content of the "mod_spatialite-5.1.0-win-amd64.7z" compress
 
 Installation instructions
 ----------------------
-Download from the "Releases" section and copy/paste to a desired folder location on your computer the two R scripts which constitute the current version (v0.10) of the Steepest paths tool:
-* The main script "**main.R**" which performs all preparatory operations prior to calculations (i.e., the setting of all parameters that control the calculations and loading of input data).
+Download the current version (v0.10) of the Steepest paths tool from the "Releases" section. You should the be able to create on your computer a directory containing the following two R scripts which constitute the tool:
+* The main script "**main.R**" which performs all preparatory operations prior to calculations (i.e., the setting of the parameters which control the calculations and loading of input data).
 * The core script "**calc_lines.R**" which calculates the steepest path lines and the intersection with forest polygons.
 
 Add in the same folder the following two input data:
-* The **digital elevation model** (DEM) in .tif format which represents the elevation of the terrain surface of your region of interest. Obviously, there must be some fairly pronounced relief (hills or mountains) since on a flat surface such as a wide plain steepest paths fail to develop. The DEM should be a plane grid with square pixels and use a projected coordinate system which form a Cartesian reference system. 
-* The **shapefile of polygons** which represent the forest areas in your region of interest. This shapefile and the DEM must have the same and well-defined coordinate system (CRS). The tool is set up to work with coordinate systems that use the meter as reference unit of measure.
+* The **digital elevation model** (DEM) in .tif format which represents the elevation of the terrain surface of your region of interest. Obviously, there should be some fairly pronounced relief (hills or mountains) since on a flat surface such as a wide plain steepest paths fail to develop. The DEM should be a plane grid with square pixels and use a projected coordinate system which form a Cartesian reference system. 
+* The **shapefile of polygons** which represents the forested areas in your region of interest. This shapefile and the DEM must have the same coordinate system (CRS). The tool is set up to work with coordinate systems that use the meter as a reference unit of measure.
 
-Getting started tips
+Tips on getting started
 ----------------------
-Launch RStudio, create a new empty project (File -> New Project) and save it in the same folder where the above-mentioned 4 items are already found.
+Launch RStudio, create a new empty project (File -> New Project) and save it in the same folder as the aformentioned 4 items.
 
 Add the main and core scripts ("main.R", "calc_lines.R") to this newly created RStudio project (File -> Open File). If you don't want to use RStudio or even create a new project remember to set the working directory properly (function _setwd_).
 
-Run the main R script. Attention: at least the first time, it is best to proceed one step at a time so that you understand the organization of the code and read the included comments and instructions.
+Run the main R script. Attention: at least the first time, it is best to proceed one step at a time so that you understand the organization of the code. Also consider reading the included comments and instructions.
 
-In the sections "**Special requirements**" and "**Input/output files**" the user has to enter and define some file and path names as well as the coordinate system.
-In the following section entitled "**Parameters**" the user can set and modify some important variables that control the computation of the steepest paths.
+In the sections "**Special requirements**" and "**Input/output files**" the user must enter and define certain file and path names as well as the coordinate system.
+In the following section entitled "**Parameters**", the user may then set and modify some important variables that control the computation of the steepest paths.
 
-When executing the last line of the main R script, the function _source_ trigger the run of the joined core R script which calculates the steepest path lines. Alternatively the user can skip this last line and execute the core script manually one step at a time in order to have more control over the different calculation processes.
+When executing the last line of the main R script, the function _source_ triggers the joined core R script which calculates the steepest path lines. Alternatively the user can skip this last line and execute the core script manually one step at a time in order to have more control over the different calculation processes.
 
-Be aware that the calculation can take a long time (many hours or even days) depending on the size of the DEM, the number of starting points generated and the processing resources available in the computer. We therefore recommend starting with a relatively small DEM so as to essay the calculation time. For example, using a DEM with an extent of 20 km x 20 km and a pixel size of 10 m and creating a starting point every 10 pixels (i.e., with _calc_nth_ set to 10 in the main R script) the calculation could last about twenty minutes and you already get as a result 40,000 output polyline features (number of output lines = DEM size / pixel size / how many pixels for a single starting point = 20,000 * 20,000 m / 10 * 10 m / 10 * 10 pixels = 400,000,000 / 100 / 100 = 40,000).
+Be aware that the calculation can take a long time (many hours or even days) depending on the size of the DEM, the number of starting points generated and the processing resources available on the computer. We therefore recommend starting with a relatively small DEM so as to allow the estimation of the calculation time. For example, using a DEM with an extent of 20 km x 20 km and a pixel size of 10 m, simulating a starting point every 10 pixels (i.e., with _calc_nth_ set to 10 in the main R script) leads to an approximate run time of about twenty minutes. As a result, one obtains 40,000 output polyline features (number of output lines = DEM size / pixel size / how many pixels for a single starting point = 20,000 * 20,000 m / 10 * 10 m / 10 * 10 pixels = 400,000,000 / 100 / 100 = 40,000).
 
 Contact
 ----------------------
@@ -89,6 +89,6 @@ Jeremy Feusi (e-mail: jeremy.feusi@wsl.ch)
 
 Citation
 ----------------------
-If you use the **Steepest paths tool** and publish some result based on this R script, please cite this software as follows:
+If you use the **Steepest paths tool** in published work, please cite this software as follows:
 
 Swiss Federal Institute for Forest Snow and Landscape Research WSL, 2023, Steepest paths tool (v0.10), https://github.com/Insubric/steepest_paths_tool.
