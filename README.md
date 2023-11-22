@@ -43,7 +43,7 @@ Upstream 3D flow lines resulting from this GRASS GIS function are quite similar 
 Compared to an established and highly reliable tool such as this GRASS GIS function, our ad hoc project is in many ways still unfinished and there is certainly much room for improvement.
 However, the **Steepest paths tool** has some features that may be advantageous for some users:
 1) It is written in R and can therefore be more easily customised to particular needs.
-2) It offers an integrated module for the continuation of the upward progression on the terrain surface when a local maximum of little importance is reached (see the paragraph devoted to "jumps" in [this](https://github.com/Insubric/steepest_paths_tool/blob/master/Challenges.md) document ).
+2) It offers an integrated module for the continuation of the upward progression on the terrain surface when a local maximum of little importance is reached (see the paragraph devoted to "jumps" in [this document](https://github.com/Insubric/steepest_paths_tool/blob/master/Challenges.md)).
 3) It computes some useful attributes for each resulting vector feature.
 4) It provides the possibility to analyze the intersection of the steepest paths with the forested areas.
 
