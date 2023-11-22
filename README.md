@@ -43,20 +43,20 @@ Upstream 3D flow lines resulting from this GRASS GIS function are quite similar 
 Compared to an established and highly reliable tool such as this GRASS GIS function, our ad hoc project is in many ways still unfinished and there is certainly much room for improvement.
 However, the **Steepest paths tool** has some features that may be advantageous for some users:
 1) It is written in R and can therefore be more easily customised to particular needs.
-2) It offers an integrated module for not interrupting the upward progression on the terrain surface of the resulting three-dimensional polylines when they reach a local maximum of little importance in the digital elevation model (see [here](https://github.com/Insubric/steepest_paths_tool/blob/master/Challenges.md) the paragraph devoted to the "jumps").
-3) It calculates some useful attributes for each resulting vector feature.
-4) It provides the possibility of analysing the intersections of the steepest paths with the forest areas.
+2) It offers an integrated module for the continuation of the upward progression on the terrain surface when a local maximum of little importance is reached (see the paragraph devoted to "jumps" in [this](https://github.com/Insubric/steepest_paths_tool/blob/master/Challenges.md) document ).
+3) It computes some useful attributes for each resulting vector feature.
+4) It provides the possibility to analyze the intersection of the steepest paths with the forested areas.
 
 Requirements
 ----------------------
-R, RTools and eventually also RStudio Desktop, as well as a selection of R packages (see "Required packages" section in the main R script) must be installed and updated on the computer.
+R, RTools and eventually also RStudio Desktop, as well as a selection of R packages (see the section "Required packages" in the main R script) must be installed and up to date on the target computer.
 
-The SQLite and SpatiaLite system libraries must also be installed on your system.
+The SQLite and SpatiaLite system libraries must also be installed on your system. In Linux, these libraries may be installed using the package manager.
 
-In particular all the dynamic link libraries (.dll) consituting the SpatiaLite extension module (e.g., "mod_spatialite.dll", "libcrypto-3-x64.dll", "libsqlite3-0.dll", "libgeos.dll", "libproj_9_2.dll") must be available in a folder which then will be included among the environment variables of the R session (see "Special requirements" section in the main R script).
+For Windows on the other hand, all dynamic link libraries (.dll) consituting the SpatiaLite extension module (e.g., "mod_spatialite.dll", "libcrypto-3-x64.dll", "libsqlite3-0.dll", "libgeos.dll", "libproj_9_2.dll") must be available in a folder included among the environment variables of the R session (see "Special requirements" section in the main R script).
 
-All these .dll files can be downloaded as MS Windows binaries from the [Gaia-SINS](https://www.gaia-gis.it/gaia-sins) federated projects home-page.
-See for instance the content of the "mod_spatialite-5.1.0-win-amd64.7z" compressed archive file (vers. 2023-08-05). This SpatiaLite extension module is a pure loadable module lacking any explicit SQLite3 dependency (see the specific [web page](https://www.gaia-gis.it/fossil/libspatialite/wiki?name=mod_spatialite) in Gaia-SINS for further explanations). 
+These .dll files can be downloaded as MS Windows binaries from the [Gaia-SINS](https://www.gaia-gis.it/gaia-sins) federated projects home-page.
+See for instance the content of the "mod_spatialite-5.1.0-win-amd64.7z" compressed archive file (vers. 2023-08-05). This SpatiaLite extension module is a pure loadable module lacking any explicit SQLite3 dependency (see the specific [web page](https://www.gaia-gis.it/fossil/libspatialite/wiki?name=mod_spatialite) of the Gaia-SINS for further explanations). 
 
 Installation instructions
 ----------------------
